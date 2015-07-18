@@ -1,0 +1,61 @@
+<section id="results-details-page" class="container-fluid full-height">
+
+  <div ng-if="searching" class="searching-container text-center text-muted">
+    <h2>Searching...</h2>
+    <img src="images/ajax-loader.gif" alt="searching..." />
+  </div>
+
+  <div ng-if="error" class="error-container text-center text-danger">
+    <h2>Sorry, we could not complete your request</h2>
+  </div>
+
+  <div class="row" ng-if="pet">
+    <div class="col-sm-5">
+      <div id="main-image-container" class="text-center" ng-if="mainImage">
+        <img ng-src="{{mainImage.original_url}}" alt="{{pet.pet_name}}" class="main-image" width="{{mainImageSize(mainImage).width}}" height="{{mainImageSize(mainImage).height}}" />
+      </div>
+      <div class="image-carousel" ng-if="pet.images">
+        <img ng-if="pet.images.length > 1" ng-src="{{image.thumbnail_url}}" ng-model="image" ng-click="setMainImage(image)" ng-repeat="image in pet.images" alt="{{pet.pet_name}}" width="{{thumbnailSize(image).width}}" height="{{thumbnailSize(image).height}}" />
+      </div>
+    </div>
+    <div class="col-sm-7">
+      <table class="details-container">
+        <tr>
+          <td>Name:</td>
+          <td>{{pet.name}}</td>
+        </tr>
+        <tr>
+          <td>Breed:</td>
+          <td>{{pet.breed}}</td>
+        </tr>
+        <tr>
+          <td>Gender:</td>
+          <td>{{pet.gender}}</td>
+        </tr>
+        <tr>
+          <td>Age:</td>
+          <td>{{pet.age}}</td>
+        </tr>
+        <tr>
+          <td>Contact:</td>
+          <td class="pet-contact">
+            <p>{{pet.phone}}</p>
+            <p>{{pet.addr_line_1}}</p>
+            <p>{{pet.addr_line_2}}</p>
+            <p>{{pet.addr_city}} {{pet.addr_state_code}} {{pet.addr_postal_code}}</p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <div class="pet-description" compile="pet.description">
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="footer-button-container">
+    <a href="javascript:void(0);" ng-click="goBack()"><span class="arrow-icon"></span>Back To Adoption List</a>
+  </div>
+</section>

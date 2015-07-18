@@ -1,0 +1,29 @@
+<section id="search-page" class="container-fluid full-height {{searchData.species}}">
+
+  <div ng-if="cityZipError" class="alert alert-danger error-container text-center" role="alert">
+    <h2>The application url is incomplete. Please provide a proper zipcode or city from which to search.</h2>
+  </div>
+
+  <form class="form-horizontal search-form" ng-submit="submit()" ng-if="! cityZipError">
+    <input type="hidden" ng-model="searchData.city_or_zip" />
+    <label id="speciesLabel" for="typeFormControl" class="col-sm-offset-5 col-sm-2 control-label">Type</label>
+    <div class="col-sm-4" id="typeFormControl">
+      <span class="pet-type-button dog-button {{(searchData.species == 'dog') ? 'selected' : ''}}" ng-click="setType('dog')"></span>
+      <span class="pet-type-button cat-button {{(searchData.species == 'cat') ? 'selected' : ''}}" ng-click="setType('cat')"></span>
+    </div>
+
+    <div class="form-group" ng-repeat="formField in selectFormFields">
+      <label for="typeSelectControl" class="col-sm-offset-5 col-sm-2 control-label">{{formField.displayName}}</label>
+      <div class="col-sm-4">
+        <selectbox class="form-control" list="formField.options" handler="selectChange(formField.name)" ng-model="selectBox[formField.name]"></selectbox>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-7 col-sm-5">
+        <button ng-disabled="processingForm" class="btn btn-primary">Find My Pet</button>
+      </div>
+    </div>
+  </form>
+
+</section>

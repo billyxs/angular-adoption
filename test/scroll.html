@@ -1,0 +1,237 @@
+<!doctype html>
+<html ng-app="scrollApp">
+  <body>
+    <div ng-controller="scrollController">
+      <h2>{{hello}}</h2>
+      <div style="width:1500px; height: 700px; background: #ccc; overflow-y:auto;" scrollable="" parameters="{{ iScrollParameters }}">
+        <div>
+          <a href="javascript:void(0);" ng-repeat="peerson in people" class="pet-option" style="border:1px solid #000; margin: 2px; display: inline-block;">
+            <img src="http://placehold.it/300x300" width="300px" height="300px" />
+          </a>
+        </div>
+        <br />
+        <div>
+          <a href="javascript:void(0);" ng-repeat="peerson in people" class="pet-option" style="border:1px solid #000; margin: 2px; display: inline-block;">
+            <img src="http://placehold.it/300x300" width="300px" height="300px" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </body>
+  <script src="../bower_components/angular/angular.min.js"></script>
+  <script src="../bower_components/angular-route/angular-route.min.js"></script>
+  <script src="../bower_components/angular-momentum-scroll/scrollable.js"></script>
+  <script>
+    angular.module('scrollApp', ['angular-momentum-scroll'])
+    .controller('scrollController', function($scope) {
+      $scope.hello = "HELLO";
+
+      $scope.iScrollParameters = { scrollX: true, scrollY: false, mouseWheel: true };
+
+      $scope.people = [
+  {
+    "id":"1",
+    "name":"Muttly",
+    "breed":"Bulldog",
+    "gender":"Female",
+    "age":"3",
+    "contact":"contact info",
+    "description":"Bacon ipsum dolor amet there is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon.",
+    "image":"http://placekitten.com/g/300/300"
+  },
+  {
+    "id":"2",
+    "name":"Forensic",
+    "breed":"German Shepherd",
+    "gender":"Female",
+    "age":"9",
+    "contact":"contact info",
+    "description":"Bacon ipsum dolor amet there is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon.",
+    "image":"http://placekitten.com/g/300/300"
+  },
+  {
+    "id":"3",
+    "name":"Franklin",
+    "breed":"Great Dane",
+    "gender":"Male",
+    "age":"6",
+    "contact":"contact info",
+    "description":"Bacon ipsum dolor amet there is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon.",
+    "image":"http://placekitten.com/g/300/300"
+  },
+  {
+    "id":"4",
+    "name":"Punky",
+    "breed":"Pug",
+    "gender":"Female",
+    "age":"3",
+    "contact":"contact info",
+    "description":"Bacon ipsum dolor amet there is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon.",
+    "image":"http://placekitten.com/g/300/300"
+  },
+  {
+    "id":"5",
+    "name":"Spiffy",
+    "breed":"Poodle",
+    "gender":"Male",
+    "age":"7",
+    "contact":"contact info",
+    "description":"Bacon ipsum dolor amet there is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon.",
+    "image":"http://placekitten.com/g/300/300"
+  },
+  {
+    "id":"1",
+    "name":"Muttly",
+    "breed":"Bulldog",
+    "gender":"Female",
+    "age":"3",
+    "contact":"contact info",
+    "description":"Bacon ipsum dolor amet there is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon.",
+    "image":"http://placekitten.com/g/300/300"
+  },
+  {
+    "id":"2",
+    "name":"Forensic",
+    "breed":"German Shepherd",
+    "gender":"Female",
+    "age":"9",
+    "contact":"contact info",
+    "description":"Bacon ipsum dolor amet there is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon.",
+    "image":"http://placekitten.com/g/300/300"
+  },
+  {
+    "id":"3",
+    "name":"Franklin",
+    "breed":"Great Dane",
+    "gender":"Male",
+    "age":"6",
+    "contact":"contact info",
+    "description":"Bacon ipsum dolor amet there is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon.",
+    "image":"http://placekitten.com/g/300/300"
+  },
+  {
+    "id":"4",
+    "name":"Punky",
+    "breed":"Pug",
+    "gender":"Female",
+    "age":"3",
+    "contact":"contact info",
+    "description":"Bacon ipsum dolor amet there is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon.",
+    "image":"http://placekitten.com/g/300/300"
+  },
+  {
+    "id":"5",
+    "name":"Spiffy",
+    "breed":"Poodle",
+    "gender":"Male",
+    "age":"7",
+    "contact":"contact info",
+    "description":"Bacon ipsum dolor amet there is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon.",
+    "image":"http://placekitten.com/g/300/300"
+  },
+  {
+    "id":"1",
+    "name":"Muttly",
+    "breed":"Bulldog",
+    "gender":"Female",
+    "age":"3",
+    "contact":"contact info",
+    "description":"Bacon ipsum dolor amet there is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon.",
+    "image":"http://placekitten.com/g/300/300"
+  },
+  {
+    "id":"2",
+    "name":"Forensic",
+    "breed":"German Shepherd",
+    "gender":"Female",
+    "age":"9",
+    "contact":"contact info",
+    "description":"Bacon ipsum dolor amet there is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon.",
+    "image":"http://placekitten.com/g/300/300"
+  },
+  {
+    "id":"3",
+    "name":"Franklin",
+    "breed":"Great Dane",
+    "gender":"Male",
+    "age":"6",
+    "contact":"contact info",
+    "description":"Bacon ipsum dolor amet there is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon.",
+    "image":"http://placekitten.com/g/300/300"
+  },
+  {
+    "id":"4",
+    "name":"Punky",
+    "breed":"Pug",
+    "gender":"Female",
+    "age":"3",
+    "contact":"contact info",
+    "description":"Bacon ipsum dolor amet there is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon.",
+    "image":"http://placekitten.com/g/300/300"
+  },
+  {
+    "id":"5",
+    "name":"Spiffy",
+    "breed":"Poodle",
+    "gender":"Male",
+    "age":"7",
+    "contact":"contact info",
+    "description":"Bacon ipsum dolor amet there is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon.",
+    "image":"http://placekitten.com/g/300/300"
+  },
+  {
+    "id":"1",
+    "name":"Muttly",
+    "breed":"Bulldog",
+    "gender":"Female",
+    "age":"3",
+    "contact":"contact info",
+    "description":"Bacon ipsum dolor amet there is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon.",
+    "image":"http://placekitten.com/g/300/300"
+  },
+  {
+    "id":"2",
+    "name":"Forensic",
+    "breed":"German Shepherd",
+    "gender":"Female",
+    "age":"9",
+    "contact":"contact info",
+    "description":"Bacon ipsum dolor amet there is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon.",
+    "image":"http://placekitten.com/g/300/300"
+  },
+  {
+    "id":"3",
+    "name":"Franklin",
+    "breed":"Great Dane",
+    "gender":"Male",
+    "age":"6",
+    "contact":"contact info",
+    "description":"Bacon ipsum dolor amet there is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon.",
+    "image":"http://placekitten.com/g/300/300"
+  },
+  {
+    "id":"4",
+    "name":"Punky",
+    "breed":"Pug",
+    "gender":"Female",
+    "age":"3",
+    "contact":"contact info",
+    "description":"Bacon ipsum dolor amet there is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon.",
+    "image":"http://placekitten.com/g/300/300"
+  },
+  {
+    "id":"5",
+    "name":"Spiffy",
+    "breed":"Poodle",
+    "gender":"Male",
+    "age":"7",
+    "contact":"contact info",
+    "description":"Bacon ipsum dolor amet there is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon. There is no bacon.",
+    "image":"http://placekitten.com/g/300/300"
+  }
+]
+
+    })
+  </script>
+</html>

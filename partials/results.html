@@ -1,0 +1,40 @@
+<section id="results-page" class="full-height">
+  <h1 class="header text-center">Adoptable {{speciesText}} Near {{locationName}}</h1>
+
+  <div ng-if="searching" class="searching-container text-center text-muted">
+    <h2>Searching...</h2>
+    <img src="images/ajax-loader.gif" alt="searching..." />
+  </div>
+
+  <div ng-if="error" class="error-container text-center text-danger">
+    <h2>{{error.message}}</h2>
+  </div>
+
+  <style>
+    /** Need to specify scroller width for horizontal scrolling */
+    .pet-options-container .scroller {
+      width: {{ (topPetList.length*400) + 'px'}};
+    }
+  </style>
+
+  <div ng-if="topPetList" class="pet-options-container" width="{{ (topPetList.length*400) + 'px'}}" scrollable parameters="{{ iScrollParameters }}" curr-x="scrollX" on-scroll-end="scrollFeedback(X, Y)">
+    <span ng-repeat="pet in topPetList"  class="pet-grouping-container">
+
+      <a href="#/results/{{pet.pet_id}}" class="pet-option">
+        <img ng-src="{{pet.large_results_photo_url}}" alt="pet.pet_name" />
+        <span class="image-text">{{pet.pet_name}}</span>
+      </a>
+      <br />
+      <a href="#/results/{{bottomPetList[$index].pet_id}}" ng-if="bottomPetList[$index]" class="pet-option">
+        <img ng-src="{{bottomPetList[$index].large_results_photo_url}}" alt="bottomPetList[$index].pet_name" />
+        <span class="image-text">{{bottomPetList[$index].pet_name}}</span>
+      </a>
+
+    </span>
+  </div>
+
+
+  <div class="footer-button-container">
+    <a ng-href="#/search"><span class="arrow-icon"></span>Update Your Selections</a>
+  </div>
+</section>

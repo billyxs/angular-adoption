@@ -1,0 +1,52 @@
+<option value="real=967;nick=0">Abyssinian</option>
+<option value="real=1119;nick=0">American Bobtail</option>
+<option value="real=1120;nick=0">American Curl</option>
+<option value="real=968;nick=0">American Shorthair</option>
+<option value="real=1122;nick=0">American Wirehair</option>
+<option value="real=969;nick=0">Balinese</option>
+<option value="real=970;nick=0">Bengal</option>
+<option value="real=971;nick=0">Birman</option>
+<option value="real=972;nick=0">Bombay</option>
+<option value="real=973;nick=0">British Shorthair</option>
+<option value="real=974;nick=0">Burmese</option>
+<option value="criteria=1198">Calico</option>
+<option value="real=1123;nick=0">Chartreux</option>
+<option value="real=1124;nick=0">Colorpoint Shorthair</option>
+<option value="real=1125;nick=0">Cornish Rex</option>
+<option value="real=1139;nick=0">Cymric</option>
+<option value="real=1126;nick=0">Devon Rex</option>
+<option value="real=1127;nick=0">Domestic Longhair</option>
+<option value="real=1128;nick=0">Domestic Mediumhair</option>
+<option value="real=1129;nick=0">Domestic Shorthair</option>
+<option value="real=1130;nick=0">Egyptian Mau</option>
+<option value="real=1131;nick=0">European Burmese</option>
+<option value="real=1132;nick=0">Exotic</option>
+<option value="real=1133;nick=0">Havana Brown</option>
+<option value="real=1192;nick=1197">Hemingway/Polydactyl</option>
+<option value="real=976;nick=0">Himalayan</option>
+<option value="real=1134;nick=0">Japanese Bobtail</option>
+<option value="real=1135;nick=0">Javanese</option>
+<option value="real=1136;nick=0">Korat</option>
+<option value="real=1137;nick=0">LaPerm</option>
+<option value="real=977;nick=0">Maine coon</option>
+<option value="real=1138;nick=0">Manx</option>
+<option value="real=1191;nick=0">Munchkin</option>
+<option value="real=979;nick=0">Norwegian Forest Cat</option>
+<option value="real=980;nick=0">Ocicat</option>
+<option value="real=1140;nick=0">Oriental</option>
+<option value="real=981;nick=0">Persian</option>
+<option value="real=1192;nick=0">Polydactyl/Hemingway</option>
+<option value="real=1141;nick=0">RagaMuffin</option>
+<option value="real=982;nick=0">Ragdoll</option>
+<option value="real=983;nick=0">Russian Blue</option>
+<option value="real=1142;nick=0">Scottish Fold</option>
+<option value="real=1143;nick=0">Selkirk Rex</option>
+<option value="real=984;nick=0">Siamese</option>
+<option value="real=1151;nick=0">Siberian</option>
+<option value="real=1145;nick=0">Singapura</option>
+<option value="real=985;nick=0">Snowshoe</option>
+<option value="real=1146;nick=0">Somali</option>
+<option value="real=1147;nick=0">Sphynx</option>
+<option value="real=1148;nick=0">Tonkinese</option>
+<option value="real=1149;nick=0">Turkish Angora</option>
+<option value="real=986;nick=0">Turkish Van</option>

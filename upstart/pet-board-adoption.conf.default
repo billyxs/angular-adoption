@@ -1,0 +1,25 @@
+# Service Template
+#
+# Upstart script for pet-board-adoption project
+
+# If we switch to unbuntu we can't use port 443.
+setuid ubuntu
+
+chdir /home/ubuntu/pet-board-adoption
+
+start on stopped rc RUNLEVEL=[2345]
+stop on runlevel [!2345]
+
+respawn
+
+respawn limit 3 30
+
+#post-start script
+#    echo "pet-board-adoption service started at `date +"%F %T.%N"`" | mail -s "pet-board-adoption Service Started" cyang@ssg.petsmart.com
+#end script
+
+#post-stop script
+#    echo "pet-board-adoption service stopped at `date +"%F %T.%N"`" | mail -s "pet-board-adoption Service Stopped" cyang@ssg.petsmart.com
+#end script
+
+exec node server.js
